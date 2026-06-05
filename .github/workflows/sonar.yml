@@ -30,4 +30,8 @@ jobs:
             --sonar-token="$SONAR_TOKEN" \
             --sonar-project-key=research-projects-all_django-oscar \
             --sonar-organization=research-projects-all \
-            --sonar-python-version=3.11
+            --sonar-python-version=3.11 \
+            --sonar-sources=oscar \
+            --sonar-tests=tests \
+            --sonar-exclusions=tests/**,**/build-wrapper-dump.json \
+            --sonar-coverage-exclusions=**/migrations/**,**/oscar/test/**
